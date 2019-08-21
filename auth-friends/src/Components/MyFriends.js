@@ -13,7 +13,7 @@ class MyFriends extends React.Component {
 
   getData = () => {
     axiosWithAuth()
-      .get("http://localhost:5000/api/friends")
+      .get("http://localhost:5000/api/friends", this.state.friends)
       .then(response => {
         console.log("Am I working?", response)
         this.setState({ friends: response.data })

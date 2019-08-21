@@ -18,7 +18,7 @@ class Login extends React.Component {
     })
   }
 
-  loginCall = event => {
+  LoginFunction = event => {
     event.preventDefault()
     axios
       .post("http://localhost:5000/api/login", this.state.credentials)
@@ -35,7 +35,7 @@ class Login extends React.Component {
     return (
       <div>
         <p> User Login </p>
-        <form onSubmit={this.loginCall}>
+        <form onSubmit={this.LoginFunction}>
           <input
             type="text"
             name="username"
@@ -51,9 +51,7 @@ class Login extends React.Component {
             onChange={this.handleChange}
           />
           <button> Login In </button>
-          <button onClick={() => ()
-          }> Log Out </button>
-          </form>
+        </form>
       </div>
     )
   }
