@@ -1,18 +1,24 @@
 import React from "react"
-import Login from "./Components/Login"
+import "./App.css"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-// import PrivateRoute from "./components/PrivateRoute"
+import Login from "./components/Login.js"
+import PrivateRoute from "./components/PrivateRoute.js"
+import Friends from "./components/Friends.js"
 
 function App() {
   return (
     <Router>
-      <div>
-        <Link to="/login">Login</Link>
-        {/* <Link to="/protected">Protected Page</Link> */}
-      </div>
-      <div>
-        <Route path="/login" component={Login} />
-        {/* <PrivateRoute exact path="/protected" component={} /> */}
+      <div className="App">
+        <p> The begining of my app </p>
+
+        <Link to="/"> Home </Link>
+        <Link to="/login"> Login </Link>
+        <Link to="/protected"> Friends </Link>
+
+        <div>
+          <Route path="/login" component={Login} />
+          <PrivateRoute exact path="/protected" component={Friends} />
+        </div>
       </div>
     </Router>
   )
