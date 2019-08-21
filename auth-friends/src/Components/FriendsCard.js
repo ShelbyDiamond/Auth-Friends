@@ -4,9 +4,9 @@ const FriendsCard = props => {
   console.log("THIS", props)
   return (
     <div>
-      <p>Name: {props.name}</p>
-      <p>age: {props.age}</p>
-      <p>email: {props.email}</p>
+      <h2>Name: {props.name}</h2>
+      <h2>Age: {props.age}</h2>
+      <h2>Email: {props.email}</h2>
     </div>
   )
 }

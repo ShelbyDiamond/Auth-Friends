@@ -27,7 +27,7 @@ class MyFriends extends React.Component {
     this.getData()
     return (
       <div>
-        <h2>These are my friends</h2>
+        <h2>This is my friends list</h2>
         {this.state.friends.map(friend => {
           return (
             <FriendsCard
