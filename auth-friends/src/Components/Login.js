@@ -1,6 +1,5 @@
 import React from "react"
 import axios from "axios"
-import Friends from "./MyFriends"
 
 class Login extends React.Component {
   state = {
@@ -33,32 +32,28 @@ class Login extends React.Component {
   }
 
   render() {
-    if (this.state.token !== "") {
-      return <Friends />
-    } else {
-      return (
-        <div>
-          <p> User Login </p>
-          <form onSubmit={this.loginCall}>
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              value={this.state.credentials.username}
-              onChange={this.handleChange}
-            />
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={this.state.credentials.password}
-              onChange={this.handleChange}
-            />
-            <button> Login In </button>
-          </form>
-        </div>
-      )
-    }
+    return (
+      <div>
+        <p> User Login </p>
+        <form onSubmit={this.loginCall}>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            value={this.state.credentials.username}
+            onChange={this.handleChange}
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={this.state.credentials.password}
+            onChange={this.handleChange}
+          />
+          <button> Login In </button>
+        </form>
+      </div>
+    )
   }
 }
 

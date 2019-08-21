@@ -24,7 +24,6 @@ class MyFriends extends React.Component {
   }
 
   render() {
-    this.getData()
     return (
       <div>
         <h2>This is my friends list</h2>
