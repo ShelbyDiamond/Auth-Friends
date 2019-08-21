@@ -1,9 +1,9 @@
 import React from "react"
 import "./App.css"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import Login from "./components/Login.js"
-import PrivateRoute from "./components/PrivateRoute.js"
-import Friends from "./components/Friends.js"
+import Login from "./Components/Login.js"
+import PrivateRoute from "./Components/PrivateRoute.js"
+import MyFriends from "./Components/MyFriends"
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
 
         <div>
           <Route path="/login" component={Login} />
-          <PrivateRoute exact path="/protected" component={Friends} />
+          <PrivateRoute exact path="/protected" component={MyFriends} />
         </div>
       </div>
     </Router>
