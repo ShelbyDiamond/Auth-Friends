@@ -51,7 +51,9 @@ class Login extends React.Component {
             onChange={this.handleChange}
           />
           <button> Login In </button>
-        </form>
+          <button onClick={() => ()
+          }> Log Out </button>
+          </form>
       </div>
     )
   }
